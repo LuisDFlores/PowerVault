@@ -15,7 +15,7 @@
 
 
 
-      <form action="/login" method="POST">
+      <!-- <form action="/login" method="POST">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
             >Email address</label
@@ -38,7 +38,64 @@
           />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+      </form> -->
+
+<!-- TESTING TAIL CODE -->
+
+
+<body class="bg-white">
+  <!-- url('/img/hero-pattern.svg') -->
+  <div class="flex min-h-screen bg-white">
+
+    <div class="w-100 bg-cover md:block hidden"
+      style="background-image:  url(https://pbs.twimg.com/media/Fek34ErWIAERXHU?format=jpg&name=medium)">
+    </div>
+    <!-- <div class="bg-no-repeat bg-right bg-cover max-w-max max-h-8 h-12 overflow-hidden">
+            <img src="log_in.webp" alt="hey">
+        </div> -->
+
+
+    <div class="md:w-1/2 max-w-lg mx-auto my-24 px-4 py-5 shadow-none">
+
+      <div class="text-left p-0 font-sans">
+
+        <h1 class=" text-gray-800 text-3xl font-medium">Let's Get Back Into It</h1>
+        <h3 class="p-1 text-gray-700"></h3>
+      </div>
+     
+      <form action="/login" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" />
+        </div>
+        <!-- <button type="submit" class="btn color-blue btn-primary">Submit</button> -->
+        <div class="mt-10">
+          <input type="submit" value="Sign in"
+            class="py-3 bg-gray-500 text-white w-full rounded hover:bg-gray-600">
+        </div>
       </form>
+      <a class="" href="/signup" data-test="Link"><span class="block  p-5 text-center text-gray-800  text-xs ">Don't have an account?</span></a>
+    </div>
+
+
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -12,7 +12,13 @@
                         <div class="alert alert-info"><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
-                <form action="/signup" method="POST">
+
+
+
+
+
+
+                <!-- <form action="/signup" method="POST">
                     <div class="mb-3">
                         <label for="userName" class="form-label">User Name</label>
                         <input type="text" class="form-control" id="userName" name="userName">
@@ -31,7 +37,83 @@
                         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
                       </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
+                  </form> -->
+
+
+
+<!-- tailwind code test -->
+
+<body class="bg-white">
+  <!-- url('/img/hero-pattern.svg') -->
+  <div class="flex min-h-screen bg-white">
+
+    <div class="w-100 bg-cover md:block hidden"
+      style="background-image:  url(https://pbs.twimg.com/media/Fek3biVXkAIsyFj?format=png&name=medium)">
+    </div>
+    <!-- <div class="bg-no-repeat bg-right bg-cover max-w-max max-h-8 h-12 overflow-hidden">
+            <img src="log_in.webp" alt="hey">
+        </div> -->
+
+
+    <div class="md:w-1/2 max-w-lg mx-auto my-24 px-4 py-5 shadow-none">
+
+      <div class="text-left p-0 font-sans">
+
+        <h1 class=" text-gray-800 text-3xl font-medium">Create an account for free</h1>
+        <h3 class="p-1 text-gray-700"></h3>
+      </div>
+      
+      <form action="/signup" method="POST">
+        <div class="mb-3">
+          <label for="userName" class="form-label">User Name</label>
+          <input type="text" class="form-control" id="userName" name="userName">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+
+        <div class="mt-10">
+          <input type="submit" value="Sign up with email"
+            class="py-3 bg-gray-500 text-white w-full rounded hover:bg-gray-600">
+
+        </div>
+      </form>
+
+
+
+      <a class="" href="/login" data-test="Link"><span class="block  p-5 text-center text-gray-800  text-xs ">Already
+          have an account?</span></a>
+    </div>
+
+
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
         </div>
     </main>
