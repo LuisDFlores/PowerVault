@@ -1,14 +1,47 @@
 <%- include('partials/header') -%>
+
+<!--  -->
+
+<header>
+  <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <div class="flex flex-wrap justify-between  mx-auto max-w-screen-xl">
+      <a href="/profile" class="flex items-left">
+        <img src="https://pbs.twimg.com/media/Fek34ErWIAERXHU?format=jpg&name=medium" class="mr-0 h-40 sm:h-40" alt="Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"><%= user.userName %></span>
+      </a>
+      <div class="flex items-center lg:order-2">
+        <a href="/feed"
+          class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Discover</a>
+        <a href="/logout"
+          class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-gray-600 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-blue-800">Log Out</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+
+
+<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+</div>
+
+<!--  -->
+
+
 <div class="container">
+  
   <div class="row mt-5">
       <div class="col-6">
-          <div>
+          <!-- <div>
               <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
               <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-          </div>
-          <div class="mt-5">
+
+          </div> -->
+
+          <div class="mt-5 pUpload">
             <h2>Add a post</h2>
+
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
@@ -22,8 +55,11 @@
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+              <button type="submit" class="btn color-gray btn-primary" value="Upload">Submit</button>
             </form>
+
+
+
           </div>
       </div>
       <div class="col-6">
@@ -36,9 +72,9 @@
           </li>
         <% } %>
         </ul>
-        <div class="row justify-content-center mt-5">
+        <!-- <div class="row justify-content-center mt-5">
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>  
+        </div>   -->
       </div>  
     </div>
   </div>
@@ -51,7 +87,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind CSS Navbar with Material Design 3</title>
+  <title></title>
   <link href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -60,7 +96,7 @@
 </head>
 
 <body>
-  <div class="min-h-screen p-10 pt-32 h-100">
+  <div class="min-30 px p-10 pt-32 h-0">
     <nav class="navbar w-full bg-white">
       <div class="container-lg px-0">
         <div class="flex w-full items-center">
@@ -76,7 +112,7 @@
             </span>
           </button>
         </div>
-        <div class="collapse navbar-collapse" navbar-menu="">
+        <!-- <div class="collapse navbar-collapse" navbar-menu=""> -->
           <ul class="navbar-nav">
             <li>
               <a class="nav-link" aria-current="page" href="/profile">
@@ -97,7 +133,7 @@
               </a>
             </li>
           </ul>
-        </div>
+        <!-- </div> -->
       </div>
     </nav>
 
@@ -105,6 +141,7 @@
   </div>
   </div>
 
+  
   <!-- from cdn -->
   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 
