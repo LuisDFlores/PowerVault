@@ -6,7 +6,7 @@
   <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between  mx-auto max-w-screen-xl">
       <a href="/profile" class="flex items-left">
-        <img src="https://pbs.twimg.com/media/Fek34ErWIAERXHU?format=jpg&name=medium" class="mr-0 h-40 sm:h-40" alt="Logo" />
+        <img src="https://pbs.twimg.com/media/Fek34ErWIAERXHU?format=jpg&name=medium" class="mr-0 h-70 sm:w-80" alt="Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"><%= user.userName %></span>
       </a>
       <div class="flex items-center lg:order-2">
@@ -55,7 +55,7 @@
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
-              <button type="submit" class="btn color-gray btn-primary" value="Upload">Submit</button>
+              <button type="submit" class="graybutton" value="Upload color-gray">Submit</button>
             </form>
 
 
@@ -63,6 +63,7 @@
           </div>
       </div>
       <div class="col-6">
+        <ul><span</ul>
         <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
@@ -83,7 +84,7 @@
 
 <!-- THIS IS THE FOOTER -->
 
-<head>
+<!-- <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -95,24 +96,16 @@
     crossorigin="anonymous" />
 </head>
 
+
+
 <body>
   <div class="min-30 px p-10 pt-32 h-0">
     <nav class="navbar w-full bg-white">
       <div class="container-lg px-0">
-        <div class="flex w-full items-center">
-          <!-- <p class="nav-brand mr-auto ml-0" href="">PowerVault</p> -->
-          <button navbar-trigger="" class="navbar-trigger ml-auto mr-0 mb-0 lg:hidden xl:hidden" type="button"
-            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-trigger-icon">
-              <span bar1="" class="navbar-trigger-bar mt-1"><span
-                  class="hidden origin-[10%_10%] rotate-45"></span></span>
-              <span bar2="" class="bar2 navbar-trigger-bar mt-2"></span>
-              <span bar3="" class="bar3 navbar-trigger-bar mt-2"><span
-                  class="mt-mt-[0.4375rem] hidden origin-[10%_90%] -rotate-45"></span></span>
-            </span>
-          </button>
-        </div>
-        <!-- <div class="collapse navbar-collapse" navbar-menu=""> -->
+      <div class="flex w-full items-center">
+
+
+        <div>
           <ul class="navbar-nav">
             <li>
               <a class="nav-link" aria-current="page" href="/profile">
@@ -133,18 +126,53 @@
               </a>
             </li>
           </ul>
-        <!-- </div> -->
-      </div>
+        
+        </div>
+          
+  </div>
+      
     </nav>
-
-
   </div>
   </div>
 
   
-  <!-- from cdn -->
+
   <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 
-</body>
+</body> -->
+
+
+<nav id="header" class="w-full z-30 top-10 py-1">
+  <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
+    <label for="menu-toggle" class="cursor-pointer md:hidden block">
+      <svg class="fill-current text-gray-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+        viewBox="0 0 20 20">
+        <title>menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </label>
+    <input class="hidden" type="checkbox" id="menu-toggle">
+
+    <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+      <nav>
+        <ul class="md:flex items-center justify-between text-base text-gray-600 pt-4 md:pt-0">
+          <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"
+              href="/profile">Profile</a></li>
+          <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"
+              href="/feed">Discover</a></li>
+          <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"
+              href="/logout">Log Out</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+      <div class="auth flex items-center bold color-gray w-full md:w-full">
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
 
 <%- include('partials/footer') -%>

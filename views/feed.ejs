@@ -1,5 +1,5 @@
 <%- include('partials/header') -%>
-  <div class="container">
+  <!-- <div class="container">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
@@ -11,70 +11,82 @@
         <% } %>
         </ul>
     </div>
-  </div>  
+  </div>   -->
 
-  <!-- THIS IS THE FOOTER -->
-  <!-- displays footer-->
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind CSS Navbar with Material Design 3</title>
-    <link href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous" />
-  </head>
-  
-  <body>
-    <div class="min-h-screen p-10 pt-32 h-100">
-      <nav class="navbar w-full bg-white">
-        <div class="container-lg px-0">
-          <div class="flex w-full items-center">
-            <!-- <p class="nav-brand mr-auto ml-0" href="">PowerVault</p> -->
-            <button navbar-trigger="" class="navbar-trigger ml-auto mr-0 mb-0 lg:hidden xl:hidden" type="button"
-              aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-trigger-icon">
-                <span bar1="" class="navbar-trigger-bar mt-1"><span
-                    class="hidden origin-[10%_10%] rotate-45"></span></span>
-                <span bar2="" class="bar2 navbar-trigger-bar mt-2"></span>
-                <span bar3="" class="bar3 navbar-trigger-bar mt-2"><span
-                    class="mt-mt-[0.4375rem] hidden origin-[10%_90%] -rotate-45"></span></span>
-              </span>
-            </button>
-          </div>
-          <!-- <div class="collapse navbar-collapse" navbar-menu=""> -->
-            <ul class="navbar-nav">
-              <li>
-                <a class="nav-link" aria-current="page" href="/profile">
-                  <i class="material-icons mr-2 text-base opacity-60">article</i>
-                  <span>Profile</span>
+<!-- this is side bar -->
+
+<!-- component -->
+<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+
+<!-- page -->
+<main class="min-h-screen w-full bg-white-100 text-white-700" x-data="layout">
+  <!-- header page -->
+  <header class="flex w-full items-center justify-between border-b-2 border-gray-200 bg-white p-2">
+    <!-- logo -->
+    <div class="flex items-center space-x-2">
+      <button type="button" class="text-3xl" @click="asideOpen = !asideOpen"><i class="bx bx-heart"></i></button>
+      <div>Discover @PowerVault</div>
+    </div>
+
+   
+  </header>
+
+  <div class="flex">
+    <!-- aside -->
+    <aside class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2" style="height: 90.5vh"
+      x-show="asideOpen">
+      <a href="/feed" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
+        <span class="text-2xl"><i class="bx bx-home"></i></span>
+        <span>Feed</span>
+      </a>
+
+      <a href="/profile" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
+        <span class="text-2xl"><i class="bx bx-user"></i></span>
+        <span>Profile</span>
+      </a>
+
+      <a href="/logout" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
+        <span class="text-2xl"><i class="bx bx-menu"></i></span>
+        <span>Log Out</span>
+      </a>
+
+    </aside>
+
+    <!-- main content page -->
+    <div class="w-full p-4">
+      <div class="container">
+        <div class="row justify-content-center mt-5">
+          <ul class="row list-unstyled">
+            <% for(var i=0; i<posts.length; i++) {%>
+              <li class="col-6 justify-content-between mt-5">
+                <a href="/post/<%= posts[i]._id%>">
+                  <img class="img-fluid" src="<%= posts[i].image%>">
                 </a>
               </li>
-              <li>
-                <a class="nav-link" href="/feed">
-                  <i class="material-icons mr-2 text-base opacity-60">apps</i>
-                  <span>Feed</span>
-                </a>
-              </li>
-              <li class="flex">
-                <a class="nav-link" href="/logout">
-                  <i class="material-icons mr-2 text-base opacity-60">logout</i>
-                  <span>Log Out </span>
-                </a>
-              </li>
-            </ul>
-          <!-- </div> -->
+              <% } %>
+          </ul>
         </div>
-      </nav>
-  
-  
+      </div>
+
+
+
     </div>
-    </div>
-  
-    <!-- from cdn -->
-    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
-  
+  </div>
+</main>
+
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("layout", () => ({
+      profileOpen: false,
+      asideOpen: true,
+    }));
+  });
+</script>
+
+
+
+<!-- this is side bar -->
+
   </body>
 <%- include('partials/footer') -%>
