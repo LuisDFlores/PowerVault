@@ -1,3 +1,8 @@
+.btn {
+    background-color: gray;
+    color: white;
+}
+
 .graybutton{
         display: block;
             width: 100%;
@@ -14,4 +19,153 @@
             appearance: none;
             border-radius: 0.25rem;
             transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+.post-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-image {
+    width: 50%;
+    height: auto;
+}
+
+.post-details {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.col-6 img {
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+
+.btn:hover {
+    background-color: gray;
+    color: white;
+}
+
+.aesthetic-btn {
+    background-color:gray;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: gray;
+}
+
+.aesthetic-btn:hover {
+    background-color: gray;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.comments {
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.7);
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(80, 80, 80);
+}
+
+.comments li {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comments form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.comments form button[type="submit"] {
+    width: 50%;
+    padding: 10px 20px;
+    background-color: rgb(255, 140, 0);
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.comments form button[type="submit"]:hover {
+    background-color: rgb(230, 115, 0);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.comment-container {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.comment-username {
+    font-weight: bold;
+}
+
+.comment-date {
+    color: gray;
+}
+
+.comment-text {
+    word-wrap: break-word;
+}
+
+
+.post-title {
+    font-family: "Fantasy", sans-serif  ;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 3px;
 }
