@@ -12,6 +12,13 @@ const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const commentRoutes = require("./routes/comments");
 
+connectDB().then(() => {
+  app.listen(process.env.PORT, () => {
+    console.log("Server is running, you better catch it!");
+  });
+}
+)
+
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 
@@ -19,7 +26,7 @@ require("dotenv").config({ path: "./config/.env" });
 require("./config/passport")(passport);
 
 //Connect To Database
-connectDB();
+// connectDB();
 
 //Using EJS for views
 app.set("view engine", "ejs");
@@ -63,10 +70,3 @@ app.use("/comment", commentRoutes);
 // app.listen(process.env.PORT, () => {
 //   console.log("Server is running, you better catch it!");
 // });
-
-connectDB().then(() => {
-  app.listen(process.env.PORT, () => {
-    console.log("Server is running, you better catch it!");
-  });
-}
-)
