@@ -8,6 +8,9 @@
     <h2 class="post-title">
       <%= post.title %>
     </h2>
+    <h3 class="caption-container">
+      <%= post.caption %>
+    </h3>
     <div class="row justify-content-between">
       <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
         <button class="aesthetic-btn fa fa-heart" type="submit"></button>

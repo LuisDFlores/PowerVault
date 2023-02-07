@@ -169,3 +169,26 @@
         text-transform: uppercase;
         letter-spacing: 3px;
 }
+
+.caption-container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Define the style for the caption text */
+.caption-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px #ddd;
+    letter-spacing: 2px;
+}
+
+/* Define the style for the caption subtext */
+.caption-subtext {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #999;
+    margin-top: 20px;
+}
